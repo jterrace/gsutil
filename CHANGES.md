@@ -781,21 +781,21 @@ Important Notes
   you have scripts that depend on being able to match spanning multiple
   directories you need to use '**' instead. For example, the command:
 
-      gsutil cp gs://bucket/*.txt
+       gsutil cp gs://bucket/*.txt
 
   will now only match .txt files in the top-level directory.
 
-      gsutil cp gs://bucket/**.txt
+       gsutil cp gs://bucket/**.txt
 
   will match across all directories.
 - gsutil ls now lists one directory at a time. If you want to list all objects
   in a bucket, you can use:
 
-      gsutil ls gs://bucket/**
+       gsutil ls gs://bucket/**
 
   or:
 
-      gsutil ls -R gs://bucket
+       gsutil ls -R gs://bucket
 
 New Features
 ------------
