@@ -226,7 +226,6 @@ Bug Fixes
 
        This problem similarly caused gsutil cp -r gs://bucket1 ./dir to create
        files names corresponding to version-specific URIs in bucket1.
-
     2. gsutil rm -a gs://bucket/obj would attempt to delete the same object
        twice, getting a NoSuchKey error on the second attempt.
 
