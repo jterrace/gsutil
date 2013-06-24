@@ -219,7 +219,6 @@ Bug Fixes
 ---------
 
 - Fixed two version-specific URI bugs:
-
     1. gsutil cp -r gs://bucket1 gs://bucket2 would create objects in bucket2
        with names corresponding to version-specific URIs in bucket1 (e.g.,
        gs://bucket2/obj#1361417568482000, where the "#1361417568482000" part was
