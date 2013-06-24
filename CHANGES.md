@@ -776,20 +776,18 @@ Release 3.0 (release-date: 2012-03-20)
 Important Notes
 ---------------
 
-- Backwards-incompatible wildcard change
-
+- Backwards-incompatible wildcard change:
   The '*' wildcard now only matches objects within a bucket directory. If
   you have scripts that depend on being able to match spanning multiple
   directories you need to use '**' instead. For example, the command:
 
-    gsutil cp gs://bucket/*.txt
+      gsutil cp gs://bucket/*.txt
 
   will now only match .txt files in the top-level directory.
 
-    gsutil cp gs://bucket/**.txt
+      gsutil cp gs://bucket/**.txt
 
   will match across all directories.
-
 - gsutil ls now lists one directory at a time. If you want to list all objects
   in a bucket, you can use:
 
