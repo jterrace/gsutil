@@ -220,16 +220,16 @@ Bug Fixes
 
 - Fixed two version-specific URI bugs:
 
-  1. gsutil cp -r gs://bucket1 gs://bucket2 would create objects in bucket2
-     with names corresponding to version-specific URIs in bucket1 (e.g.,
-     gs://bucket2/obj#1361417568482000, where the "#1361417568482000" part was
-     part of the object name, not the object's generation).
+    1. gsutil cp -r gs://bucket1 gs://bucket2 would create objects in bucket2
+       with names corresponding to version-specific URIs in bucket1 (e.g.,
+       gs://bucket2/obj#1361417568482000, where the "#1361417568482000" part was
+       part of the object name, not the object's generation).
 
-     This problem similarly caused gsutil cp -r gs://bucket1 ./dir to create
-     files names corresponding to version-specific URIs in bucket1.
+       This problem similarly caused gsutil cp -r gs://bucket1 ./dir to create
+       files names corresponding to version-specific URIs in bucket1.
 
-  2. gsutil rm -a gs://bucket/obj would attempt to delete the same object
-     twice, getting a NoSuchKey error on the second attempt.
+    2. gsutil rm -a gs://bucket/obj would attempt to delete the same object
+       twice, getting a NoSuchKey error on the second attempt.
 
 
 Release 3.24 (release-date: 2013-02-19)
